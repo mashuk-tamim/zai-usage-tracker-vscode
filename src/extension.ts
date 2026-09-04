@@ -517,36 +517,34 @@ function buildTooltip(parsed: any, timezone: string, timeFormat: string = '12h')
   if (parsed.sessionLimit) {
     const s = parsed.sessionLimit;
     const unit = s.type === 'CREDIT_LIMIT' ? 'Credits' : 'Tokens';
-    md.appendMarkdown(`### 5-Hour Limit\n`);
-    md.appendMarkdown(`**${Math.round(s.percentage)}% Used**\n`);
-    md.appendMarkdown(`${unit}: ${formatNumber(s.currentValue)} / ${formatNumber(s.usage)}\n`);
+    md.appendMarkdown(`**5-Hour Limit**  \n`);
+    md.appendMarkdown(`**${Math.round(s.percentage)}% Used** &nbsp; ${unit}: ${formatNumber(s.currentValue)} / ${formatNumber(s.usage)}  \n`);
     if (s.nextResetTime) {
-       md.appendMarkdown(`Reset Time: ${formatDate(s.nextResetTime, timezone, timeFormat)}\n\n`);
+      md.appendMarkdown(`**Reset Time:** ${formatDate(s.nextResetTime, timezone, timeFormat)}\n\n`);
     } else {
-       md.appendMarkdown('\n');
+      md.appendMarkdown('\n');
     }
   }
 
   if (parsed.weeklyLimit) {
     const w = parsed.weeklyLimit;
     const unit = w.type === 'CREDIT_LIMIT' ? 'Credits' : 'Tokens';
-    md.appendMarkdown(`### Weekly Limit\n`);
-    md.appendMarkdown(`**${Math.round(w.percentage)}% Used**\n`);
-    md.appendMarkdown(`${unit}: ${formatNumber(w.currentValue)} / ${formatNumber(w.usage)}\n`);
+    md.appendMarkdown(`**Weekly Limit**  \n`);
+    md.appendMarkdown(`**${Math.round(w.percentage)}% Used** &nbsp; ${unit}: ${formatNumber(w.currentValue)} / ${formatNumber(w.usage)}  \n`);
     if (w.nextResetTime) {
-       md.appendMarkdown(`Reset Time: ${formatDate(w.nextResetTime, timezone, timeFormat)}\n\n`);
+      md.appendMarkdown(`**Reset Time:** ${formatDate(w.nextResetTime, timezone, timeFormat)}\n\n`);
     } else {
-       md.appendMarkdown('\n');
+      md.appendMarkdown('\n');
     }
   }
 
   if (parsed.mcpLimit) {
-    md.appendMarkdown(`### MCP Tool Calls\n`);
-    md.appendMarkdown(`**${Math.round(parsed.mcpLimit.percentage)}% Used**\n`);
-    md.appendMarkdown(`Calls: ${parsed.mcpLimit.currentValue} / ${parsed.mcpLimit.usage}\n`);
+    const m = parsed.mcpLimit;
+    md.appendMarkdown(`**MCP Tool Calls**  \n`);
+    md.appendMarkdown(`**${Math.round(m.percentage)}% Used** &nbsp; Calls: ${m.currentValue} / ${m.usage}\n\n`);
   }
 
-  md.appendMarkdown(`\n---\n*💡 Click status bar item for instant details & actions*\n`);
+  md.appendMarkdown(`• Click status bar item for instant details & actions\n`);
 
   return md;
 }
