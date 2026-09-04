@@ -51,4 +51,4 @@ Available under **Settings (`Cmd + ,`) > Extensions > Z.ai Usage Tracker**:
 
 ## License
 
-[MIT License](https://github.com/mashuk-tamim/zai-usage-tracker/blob/main/LICENSE)
+[MIT License](https://github.com/mashuk-tamim/zai-usage-tracker-vscode/blob/main/LICENSE)
