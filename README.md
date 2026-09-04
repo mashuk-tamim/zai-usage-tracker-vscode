@@ -4,6 +4,22 @@ Track your **Z.ai (GLM) Coding Plan** (Lite, Pro, Max) usage, 5-hour rolling quo
 
 ![Status Bar Demo](icon.png)
 
+## Preview
+
+**Status bar with hover tooltip:**
+
+![Status bar item showing Z.ai quota usage with hover tooltip](images/quick-pick.png)
+
+**Details panel (click the status bar item):**
+
+![QuickPick details panel with quota breakdown and actions](images/detailed-config.png)
+
+## Install
+
+- **VS Code Marketplace**: 🚧 marketplace extension is coming.
+- **Open VSX** (enables in-IDE search in Cursor, Windsurf & Antigravity) 🚧 coming soon.
+- **JetBrains IDEs** (IntelliJ IDEA, Android Studio): 🚧 support coming soon.
+
 ## Features
 
 - ⚡ **Real-Time Status Bar**: Displays current 5-hour quota usage percentage and time remaining until reset directly in your status bar.
