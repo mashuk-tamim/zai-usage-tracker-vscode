@@ -1,0 +1,102 @@
+{
+  "name": "zai-usage-tracker",
+  "displayName": "Z.ai Usage Tracker",
+  "description": "Track your Z.ai / GLM coding plan usage, 5-hour quota, and weekly quota.",
+  "version": "1.0.0",
+  "publisher": "mashuk-tamim",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mashuk-tamim/zai-usage-tracker-vscode.git"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "zaiUsageTracker.showDetails",
+        "title": "Z.ai: Show Usage Details"
+      },
+      {
+        "command": "zaiUsageTracker.setupWizard",
+        "title": "Z.ai: Setup / Full Configuration Wizard"
+      },
+      {
+        "command": "zaiUsageTracker.refresh",
+        "title": "Z.ai: Refresh Usage",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "zaiUsageTracker.configureApiKey",
+        "title": "Z.ai: Configure API Key"
+      },
+      {
+        "command": "zaiUsageTracker.configureTimezone",
+        "title": "Z.ai: Configure Timezone"
+      },
+      {
+        "command": "zaiUsageTracker.selectTimeFormat",
+        "title": "Z.ai: Select Time Format (12h / 24h)"
+      },
+      {
+        "command": "zaiUsageTracker.configureRefreshInterval",
+        "title": "Z.ai: Configure Refresh Interval (minutes)"
+      }
+    ],
+    "configuration": {
+      "title": "Z.ai Usage Tracker",
+      "properties": {
+        "zaiUsageTracker.timezone": {
+          "type": "string",
+          "default": "Asia/Dhaka",
+          "description": "Your local timezone (e.g., Asia/Dhaka, Asia/Shanghai, local)"
+        },
+        "zaiUsageTracker.timeFormat": {
+          "type": "string",
+          "enum": [
+            "12h",
+            "24h"
+          ],
+          "enumDescriptions": [
+            "12-hour format with AM/PM (e.g. 01:14 PM)",
+            "24-hour format (e.g. 13:14)"
+          ],
+          "default": "12h",
+          "description": "Time format for quota reset times (12h with AM/PM or 24h)."
+        },
+        "zaiUsageTracker.refreshIntervalMinutes": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 1440,
+          "default": 5,
+          "description": "Background refresh interval in minutes (1 to 1440 minutes / 24 hours). Default: 5."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@vscode/vsce": "^3.9.2",
+    "eslint": "^8.49.0",
+    "typescript": "^5.2.2"
+  }
+}
