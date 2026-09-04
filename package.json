@@ -1,5 +1,5 @@
 {
-  "name": "zai-usage-tracker",
+  "name": "zai-usage-tracker-vscode",
   "displayName": "Z.ai Usage Tracker",
   "description": "Track your Z.ai / GLM coding plan usage, 5-hour quota, and weekly quota.",
   "version": "1.0.0",
@@ -13,6 +13,20 @@
   "engines": {
     "vscode": "^1.80.0"
   },
+  "homepage": "https://github.com/mashuk-tamim/zai-usage-tracker-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/mashuk-tamim/zai-usage-tracker-vscode/issues"
+  },
+  "keywords": [
+    "zai",
+    "glm",
+    "quota",
+    "usage",
+    "tracker",
+    "token",
+    "status bar",
+    "coding plan"
+  ],
   "categories": [
     "Other"
   ],
