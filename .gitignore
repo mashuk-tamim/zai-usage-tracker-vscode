@@ -29,3 +29,6 @@ Thumbs.db
 !.vscode/launch.json
 !.vscode/extensions.json
 .idea/
+
+# Local planning notes
+TODO.md
