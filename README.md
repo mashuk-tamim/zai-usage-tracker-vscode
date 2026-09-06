@@ -16,6 +16,7 @@ Track your **Z.ai (GLM) Coding Plan** (Lite, Pro, Max) usage, 5-hour rolling quo
 
 ## Install
 
+- **VSIX (available now)**: Download the `.vsix` from [GitHub Releases](https://github.com/mashuk-tamim/zai-usage-tracker-vscode/releases), then in VS Code press `Cmd + Shift + P` (macOS) or `Ctrl + Shift + P` (Windows/Linux) → `Extensions: Install from VSIX...` → select the file.
 - **VS Code Marketplace**: 🚧 marketplace extension is coming.
 - **Open VSX** (enables in-IDE search in Cursor, Windsurf & Antigravity) 🚧 coming soon.
 - **JetBrains IDEs** (IntelliJ IDEA, Android Studio): 🚧 support coming soon.
